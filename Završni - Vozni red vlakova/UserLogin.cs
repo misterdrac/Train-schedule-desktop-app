@@ -30,9 +30,9 @@ namespace Završni___Vozni_red_vlakova
         private void UserLogin_LogInButton_Click(object sender, EventArgs e)
         {
 
-            Vozni_red_vlakovaEntities UserDB = new Vozni_red_vlakovaEntities();
+            ZR_VozniRedVlakovaEntities UserDB = new ZR_VozniRedVlakovaEntities();
 
-            var u = UserDB.Users_table.Where(i => i.User_Name == this.userName_Textbox.Text && i.User_Pass == this.userPass_Textbox.Text).FirstOrDefault();
+            var u = UserDB.User_Table.Where(i => i.User_Name == this.userName_Textbox.Text && i.User_Pass == this.userPass_Textbox.Text).FirstOrDefault();
 
             if (u != null)
             {
@@ -56,11 +56,11 @@ namespace Završni___Vozni_red_vlakova
             try
             {
                 string a = userName_Textbox.Text;
-                if (a.Length >= 8)
+                if (a.Length >= 16)
                 {
                     uname = false;
                     userName_Textbox.BackColor = Color.LightGray;
-                    //MessageBox.Show("Korisničko ime ne smije sadržavati više od 8 znakova !", "Upozorenje !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Korisničko ime ne smije sadržavati više od 16 znakova !", "Upozorenje !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -82,7 +82,7 @@ namespace Završni___Vozni_red_vlakova
                 string a = userPass_Textbox.Text;
                 if (a.Length >= 16)
                 {
-                    uname = false;
+                    upass = false;
                     userPass_Textbox.BackColor = Color.LightGray;
                     //MessageBox.Show("Korisnički password ne smije sadržavati više od 16 znakova !", "Upozorenje !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -109,6 +109,19 @@ namespace Završni___Vozni_red_vlakova
                 this.UserLogin_LogInButton.Enabled = false;
             }
         }
-        
+
+        private void UserLogin_RegistrationButton_Click(object sender, EventArgs e)
+        {
+            //Registration registration = new Registration();
+            //registration.Show();
+
+            if (UserLogin.ActiveForm == ActiveForm)
+            {
+                this.Hide();
+                var registration = new Registration();
+                registration.Closed += (s, args) => this.Close();
+                registration.Show();
+            }
+        }
     }
 }

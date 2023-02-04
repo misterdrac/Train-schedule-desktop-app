@@ -12,7 +12,7 @@ namespace Završni___Vozni_red_vlakova
     using System;
     using System.Collections.Generic;
     
-    public partial class Users_table
+    public partial class User_Table
     {
         public int ID { get; set; }
         public string User_Name { get; set; }

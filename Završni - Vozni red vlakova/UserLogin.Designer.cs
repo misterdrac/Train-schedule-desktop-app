@@ -45,6 +45,7 @@
             this.satGMD = new System.Windows.Forms.Label();
             this.satSMS = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.UserLogin_RegistrationButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +75,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.UserLogin_RegistrationButton);
             this.panel2.Controls.Add(this.UserLogin_LogInButton);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.userPass_Textbox);
@@ -83,7 +85,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(176, 132);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(395, 226);
+            this.panel2.Size = new System.Drawing.Size(395, 241);
             this.panel2.TabIndex = 1;
             // 
             // UserLogin_LogInButton
@@ -202,6 +204,18 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // UserLogin_RegistrationButton
+            // 
+            this.UserLogin_RegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserLogin_RegistrationButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLogin_RegistrationButton.Location = new System.Drawing.Point(194, 190);
+            this.UserLogin_RegistrationButton.Name = "UserLogin_RegistrationButton";
+            this.UserLogin_RegistrationButton.Size = new System.Drawing.Size(129, 30);
+            this.UserLogin_RegistrationButton.TabIndex = 9;
+            this.UserLogin_RegistrationButton.Text = "Registriraj se !";
+            this.UserLogin_RegistrationButton.UseVisualStyleBackColor = true;
+            this.UserLogin_RegistrationButton.Click += new System.EventHandler(this.UserLogin_RegistrationButton_Click);
+            // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +260,6 @@
         private System.Windows.Forms.Label satGMD;
         private System.Windows.Forms.Label satSMS;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button UserLogin_RegistrationButton;
     }
 }

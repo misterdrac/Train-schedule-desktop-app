@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Završni___Vozni_red_vlakova
+{
+    public partial class Contact : Form
+    {
+        public Contact()
+        {
+            InitializeComponent();
+        }
+
+        private void ToolStripMenuItem_Home_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm= new MainForm();
+            this.Close();
+            mainForm.Show();
+        }
+    }
+}

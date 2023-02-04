@@ -13,10 +13,10 @@ namespace Završni___Vozni_red_vlakova
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Vozni_red_vlakovaEntities : DbContext
+    public partial class ZR_VozniRedVlakovaEntities : DbContext
     {
-        public Vozni_red_vlakovaEntities()
-            : base("name=Vozni_red_vlakovaEntities")
+        public ZR_VozniRedVlakovaEntities()
+            : base("name=ZR_VozniRedVlakovaEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace Završni___Vozni_red_vlakova
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Users_table> Users_table { get; set; }
+        public virtual DbSet<User_Table> User_Table { get; set; }
     }
 }

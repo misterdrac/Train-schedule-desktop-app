@@ -4,47 +4,47 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Vozni_red_vlakovaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Users_table">
+      <Schema Namespace="ZR_VozniRedVlakovaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="User_Table">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="User_Name" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="User_Pass" Type="varchar" MaxLength="20" />
+          <Property Name="User_Pass" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="User_Status" Type="varchar" MaxLength="10" />
           <Property Name="User_LoginDT" Type="datetime" />
         </EntityType>
-        <EntityContainer Name="Vozni_red_vlakovaModelStoreContainer">
-          <EntitySet Name="Users_table" EntityType="Self.Users_table" Schema="dbo" store:Type="Tables" />
+        <EntityContainer Name="ZR_VozniRedVlakovaModelStoreContainer">
+          <EntitySet Name="User_Table" EntityType="Self.User_Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Vozni_red_vlakovaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Users_table">
+      <Schema Namespace="ZR_VozniRedVlakovaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User_Table">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="User_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="User_Pass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Pass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="User_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="User_LoginDT" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="Vozni_red_vlakovaEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Users_table" EntityType="Self.Users_table" />
+        <EntityContainer Name="ZR_VozniRedVlakovaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User_Table" EntityType="Self.User_Table" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Vozni_red_vlakovaModelStoreContainer" CdmEntityContainer="Vozni_red_vlakovaEntities">
-          <EntitySetMapping Name="Users_table">
-            <EntityTypeMapping TypeName="Vozni_red_vlakovaModel.Users_table">
-              <MappingFragment StoreEntitySet="Users_table">
+        <EntityContainerMapping StorageEntityContainer="ZR_VozniRedVlakovaModelStoreContainer" CdmEntityContainer="ZR_VozniRedVlakovaEntities">
+          <EntitySetMapping Name="User_Table">
+            <EntityTypeMapping TypeName="ZR_VozniRedVlakovaModel.User_Table">
+              <MappingFragment StoreEntitySet="User_Table">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="User_Name" ColumnName="User_Name" />
                 <ScalarProperty Name="User_Pass" ColumnName="User_Pass" />
