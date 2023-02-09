@@ -18,27 +18,41 @@ namespace Završni___Vozni_red_vlakova
         {
             InitializeComponent();
         }
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-        private const int WS_CAPTION = 0x00C00000;
+        //Disableanje close buttona
+        const int MF_BYPOSITION = 0x400;
 
-        // Removes the close button in the caption bar
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
+        [DllImport("User32")]
+        private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
 
-                // This disables the close button
-                // myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+        [DllImport("User32")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
 
-                // this appears to completely remove the close button
-                myCp.Style &= WS_CAPTION;
+        [DllImport("User32")]
+        private static extern int GetMenuItemCount(IntPtr hWnd);
 
-                return myCp;
-            }
-        }
+        /*  Micanje caption bara ukljucujuci sve gumbove i ikone
+         private const int CP_NOCLOSE_BUTTON = 0x200;
+         private const int WS_CAPTION = 0x00C00000;
+         // Removes the close button in the caption bar
+         protected override CreateParams CreateParams
+         {
+             get
+             {
+                 CreateParams myCp = base.CreateParams;
+                 // This disables the close button
+                 myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                 // this appears to completely remove the close button
+                 myCp.Style &= WS_CAPTION;
+
+                 return myCp;
+             }
+         }
+        */
         private void MainForm_Load(object sender, EventArgs e)
         {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int menuItemCount = GetMenuItemCount(hMenu);
+            RemoveMenu(hMenu, menuItemCount - 1, MF_BYPOSITION);
             CheckLogin();
             //var sm = GetSystemMenu(Handle, false);
             //EnableMenuItem(sm, SC_CLOSE, MF_BYCOMMAND | MF_DISABLED);
@@ -88,8 +102,9 @@ namespace Završni___Vozni_red_vlakova
         private void ToolStripMenuItem_Home_Click(object sender, EventArgs e)
         {
             MainForm mainForm1 = new MainForm();
-            this.Hide();
+            //this.Hide();
             mainForm1.Show();
+            mainForm1.BringToFront();
             
         }
 
@@ -113,6 +128,7 @@ namespace Završni___Vozni_red_vlakova
             contact.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             contact.Dock = DockStyle.Fill;
             contact.Show();
+            contact.BringToFront();
         }
 
         private void ToolStripMenuItem_Information_Click(object sender, EventArgs e)
@@ -125,6 +141,7 @@ namespace Završni___Vozni_red_vlakova
             information.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             information.Dock = DockStyle.Fill;
             information.Show();
+            information.BringToFront();
         }
 
         private void ToolStripMenuItem_TicketSelling_Click(object sender, EventArgs e)
@@ -137,6 +154,8 @@ namespace Završni___Vozni_red_vlakova
             ticketSelling.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ticketSelling.Dock = DockStyle.Fill;
             ticketSelling.Show();
+            ticketSelling.BringToFront();
+
         }
     }
 }

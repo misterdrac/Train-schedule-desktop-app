@@ -102,9 +102,8 @@
             this.satGMD.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.3F, System.Drawing.FontStyle.Bold);
             this.satGMD.Location = new System.Drawing.Point(20, 77);
             this.satGMD.Name = "satGMD";
-            this.satGMD.Size = new System.Drawing.Size(19, 22);
+            this.satGMD.Size = new System.Drawing.Size(0, 22);
             this.satGMD.TabIndex = 2;
-            this.satGMD.Text = "y";
             // 
             // satSMS
             // 
@@ -112,9 +111,8 @@
             this.satSMS.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.3F, System.Drawing.FontStyle.Bold);
             this.satSMS.Location = new System.Drawing.Point(20, 51);
             this.satSMS.Name = "satSMS";
-            this.satSMS.Size = new System.Drawing.Size(19, 22);
+            this.satSMS.Size = new System.Drawing.Size(0, 22);
             this.satSMS.TabIndex = 1;
-            this.satSMS.Text = "x";
             // 
             // label2
             // 
@@ -311,6 +309,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vozni red vlakova";

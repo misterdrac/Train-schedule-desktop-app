@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,20 @@ namespace Završni___Vozni_red_vlakova
         {
             InitializeComponent();
         }
+        //Disableanje close buttona
+        const int MF_BYPOSITION = 0x400;
+        [DllImport("User32")]
+        private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        [DllImport("User32")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+        [DllImport("User32")]
+        private static extern int GetMenuItemCount(IntPtr hWnd);
+        //
         private void UserLogin_Load_1(object sender, EventArgs e)
         {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int menuItemCount = GetMenuItemCount(hMenu);
+            RemoveMenu(hMenu, menuItemCount - 1, MF_BYPOSITION);
             this.UserLogin_LogInButton.Enabled = false;
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -122,6 +135,11 @@ namespace Završni___Vozni_red_vlakova
                 registration.Closed += (s, args) => this.Close();
                 registration.Show();
             }
+        }
+
+        private void UserLoginExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

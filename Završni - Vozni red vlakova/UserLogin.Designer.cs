@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UserLogin_RegistrationButton = new System.Windows.Forms.Button();
             this.UserLogin_LogInButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userPass_Textbox = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.satGMD = new System.Windows.Forms.Label();
             this.satSMS = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.UserLogin_RegistrationButton = new System.Windows.Forms.Button();
+            this.UserLoginExitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +76,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.UserLoginExitButton);
             this.panel2.Controls.Add(this.UserLogin_RegistrationButton);
             this.panel2.Controls.Add(this.UserLogin_LogInButton);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -88,11 +90,23 @@
             this.panel2.Size = new System.Drawing.Size(395, 241);
             this.panel2.TabIndex = 1;
             // 
+            // UserLogin_RegistrationButton
+            // 
+            this.UserLogin_RegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserLogin_RegistrationButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLogin_RegistrationButton.Location = new System.Drawing.Point(194, 190);
+            this.UserLogin_RegistrationButton.Name = "UserLogin_RegistrationButton";
+            this.UserLogin_RegistrationButton.Size = new System.Drawing.Size(129, 30);
+            this.UserLogin_RegistrationButton.TabIndex = 9;
+            this.UserLogin_RegistrationButton.Text = "Registriraj se !";
+            this.UserLogin_RegistrationButton.UseVisualStyleBackColor = true;
+            this.UserLogin_RegistrationButton.Click += new System.EventHandler(this.UserLogin_RegistrationButton_Click);
+            // 
             // UserLogin_LogInButton
             // 
             this.UserLogin_LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UserLogin_LogInButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLogin_LogInButton.Location = new System.Drawing.Point(194, 154);
+            this.UserLogin_LogInButton.Location = new System.Drawing.Point(194, 151);
             this.UserLogin_LogInButton.Name = "UserLogin_LogInButton";
             this.UserLogin_LogInButton.Size = new System.Drawing.Size(129, 30);
             this.UserLogin_LogInButton.TabIndex = 8;
@@ -112,7 +126,7 @@
             // 
             // userPass_Textbox
             // 
-            this.userPass_Textbox.Location = new System.Drawing.Point(179, 128);
+            this.userPass_Textbox.Location = new System.Drawing.Point(179, 123);
             this.userPass_Textbox.Name = "userPass_Textbox";
             this.userPass_Textbox.PasswordChar = '*';
             this.userPass_Textbox.Size = new System.Drawing.Size(165, 20);
@@ -131,7 +145,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 109);
+            this.label4.Location = new System.Drawing.Point(176, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 16);
             this.label4.TabIndex = 2;
@@ -204,17 +218,19 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // UserLogin_RegistrationButton
+            // UserLoginExitButton
             // 
-            this.UserLogin_RegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserLogin_RegistrationButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLogin_RegistrationButton.Location = new System.Drawing.Point(194, 190);
-            this.UserLogin_RegistrationButton.Name = "UserLogin_RegistrationButton";
-            this.UserLogin_RegistrationButton.Size = new System.Drawing.Size(129, 30);
-            this.UserLogin_RegistrationButton.TabIndex = 9;
-            this.UserLogin_RegistrationButton.Text = "Registriraj se !";
-            this.UserLogin_RegistrationButton.UseVisualStyleBackColor = true;
-            this.UserLogin_RegistrationButton.Click += new System.EventHandler(this.UserLogin_RegistrationButton_Click);
+            this.UserLoginExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserLoginExitButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLoginExitButton.Image = ((System.Drawing.Image)(resources.GetObject("UserLoginExitButton.Image")));
+            this.UserLoginExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UserLoginExitButton.Location = new System.Drawing.Point(26, 190);
+            this.UserLoginExitButton.Name = "UserLoginExitButton";
+            this.UserLoginExitButton.Size = new System.Drawing.Size(129, 30);
+            this.UserLoginExitButton.TabIndex = 10;
+            this.UserLoginExitButton.Text = "EXIT";
+            this.UserLoginExitButton.UseVisualStyleBackColor = true;
+            this.UserLoginExitButton.Click += new System.EventHandler(this.UserLoginExitButton_Click);
             // 
             // UserLogin
             // 
@@ -261,5 +277,6 @@
         private System.Windows.Forms.Label satSMS;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button UserLogin_RegistrationButton;
+        private System.Windows.Forms.Button UserLoginExitButton;
     }
 }

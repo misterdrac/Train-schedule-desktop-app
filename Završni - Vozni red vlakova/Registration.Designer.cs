@@ -37,6 +37,9 @@
             this.satGMD = new System.Windows.Forms.Label();
             this.satSMS = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.HideShowButton = new System.Windows.Forms.Button();
+            this.registationUserEmail_Textbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.registrationComebackButton = new System.Windows.Forms.Button();
             this.dateTimePicker_Registration = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -118,6 +121,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.HideShowButton);
+            this.panel2.Controls.Add(this.registationUserEmail_Textbox);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.registrationComebackButton);
             this.panel2.Controls.Add(this.dateTimePicker_Registration);
             this.panel2.Controls.Add(this.label6);
@@ -130,8 +136,35 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(176, 132);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(395, 253);
+            this.panel2.Size = new System.Drawing.Size(395, 281);
             this.panel2.TabIndex = 11;
+            // 
+            // HideShowButton
+            // 
+            this.HideShowButton.Image = ((System.Drawing.Image)(resources.GetObject("HideShowButton.Image")));
+            this.HideShowButton.Location = new System.Drawing.Point(350, 131);
+            this.HideShowButton.Name = "HideShowButton";
+            this.HideShowButton.Size = new System.Drawing.Size(40, 35);
+            this.HideShowButton.TabIndex = 16;
+            this.HideShowButton.UseVisualStyleBackColor = true;
+            this.HideShowButton.Click += new System.EventHandler(this.HideShowButton_Click);
+            // 
+            // registationUserEmail_Textbox
+            // 
+            this.registationUserEmail_Textbox.Location = new System.Drawing.Point(179, 102);
+            this.registationUserEmail_Textbox.Name = "registationUserEmail_Textbox";
+            this.registationUserEmail_Textbox.Size = new System.Drawing.Size(165, 20);
+            this.registationUserEmail_Textbox.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(176, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Korisnička e-mail adresa :";
             // 
             // registrationComebackButton
             // 
@@ -139,7 +172,7 @@
             this.registrationComebackButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrationComebackButton.Image = ((System.Drawing.Image)(resources.GetObject("registrationComebackButton.Image")));
             this.registrationComebackButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.registrationComebackButton.Location = new System.Drawing.Point(179, 205);
+            this.registrationComebackButton.Location = new System.Drawing.Point(179, 241);
             this.registrationComebackButton.Name = "registrationComebackButton";
             this.registrationComebackButton.Size = new System.Drawing.Size(129, 30);
             this.registrationComebackButton.TabIndex = 13;
@@ -150,7 +183,7 @@
             // dateTimePicker_Registration
             // 
             this.dateTimePicker_Registration.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Registration.Location = new System.Drawing.Point(179, 142);
+            this.dateTimePicker_Registration.Location = new System.Drawing.Point(179, 178);
             this.dateTimePicker_Registration.Name = "dateTimePicker_Registration";
             this.dateTimePicker_Registration.Size = new System.Drawing.Size(165, 21);
             this.dateTimePicker_Registration.TabIndex = 12;
@@ -159,7 +192,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(176, 123);
+            this.label6.Location = new System.Drawing.Point(176, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 16);
             this.label6.TabIndex = 10;
@@ -169,7 +202,7 @@
             // 
             this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registrationButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationButton.Location = new System.Drawing.Point(179, 169);
+            this.registrationButton.Location = new System.Drawing.Point(179, 205);
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(129, 30);
             this.registrationButton.TabIndex = 9;
@@ -188,7 +221,7 @@
             // 
             // registrationUserPass_Textbox
             // 
-            this.registrationUserPass_Textbox.Location = new System.Drawing.Point(179, 100);
+            this.registrationUserPass_Textbox.Location = new System.Drawing.Point(179, 139);
             this.registrationUserPass_Textbox.Name = "registrationUserPass_Textbox";
             this.registrationUserPass_Textbox.PasswordChar = '*';
             this.registrationUserPass_Textbox.Size = new System.Drawing.Size(165, 20);
@@ -205,7 +238,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 83);
+            this.label4.Location = new System.Drawing.Point(176, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 16);
             this.label4.TabIndex = 2;
@@ -247,9 +280,12 @@
             this.Controls.Add(this.PanelVrijeme);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vozni red vlakova - registracija korisnika";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PanelVrijeme.ResumeLayout(false);
@@ -281,5 +317,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Registration;
         private System.Windows.Forms.Button registrationComebackButton;
+        private System.Windows.Forms.TextBox registationUserEmail_Textbox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button HideShowButton;
     }
 }
