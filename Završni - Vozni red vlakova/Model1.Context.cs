@@ -25,6 +25,7 @@ namespace Završni___Vozni_red_vlakova
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Train_Lines> Train_Lines { get; set; }
         public virtual DbSet<User_Table> User_Table { get; set; }
     }
 }

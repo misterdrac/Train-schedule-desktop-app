@@ -13,7 +13,6 @@ namespace Završni___Vozni_red_vlakova
 {
     public partial class MainForm : Form
     {
-        
         public MainForm()
         {
             InitializeComponent();
@@ -29,7 +28,6 @@ namespace Završni___Vozni_red_vlakova
 
         [DllImport("User32")]
         private static extern int GetMenuItemCount(IntPtr hWnd);
-
         /*  Micanje caption bara ukljucujuci sve gumbove i ikone
          private const int CP_NOCLOSE_BUTTON = 0x200;
          private const int WS_CAPTION = 0x00C00000;
@@ -54,16 +52,6 @@ namespace Završni___Vozni_red_vlakova
             int menuItemCount = GetMenuItemCount(hMenu);
             RemoveMenu(hMenu, menuItemCount - 1, MF_BYPOSITION);
             CheckLogin();
-            //var sm = GetSystemMenu(Handle, false);
-            //EnableMenuItem(sm, SC_CLOSE, MF_BYCOMMAND | MF_DISABLED);
-            //[DllImport("user32")]
-            //static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
-            //[DllImport("user32")]
-            //static extern bool EnableMenuItem(IntPtr hMenu, uint uIDEnableItem, uint uEnable);
-
-            //const int MF_BYCOMMAND = 0;
-            //const int MF_DISABLED = 2;
-            //const int SC_CLOSE = 0xF060;
         }
         public void CheckLogin()
         {  
@@ -89,23 +77,18 @@ namespace Završni___Vozni_red_vlakova
                 this.ToolStripMenuItem_Information.Visible = true;
                 this.ToolStripMenuItem_Exit.Visible = true;
             }
-
-
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.satSMS.Text = DateTime.Now.ToString("HH:mm:ss");
             this.satGMD.Text = DateTime.Now.ToString("D");
-
         }
 
         private void ToolStripMenuItem_Home_Click(object sender, EventArgs e)
         {
             MainForm mainForm1 = new MainForm();
-            //this.Hide();
             mainForm1.Show();
             mainForm1.BringToFront();
-            
         }
 
         private void ToolStripMenuItem_Exit_Click(object sender, EventArgs e)
@@ -155,7 +138,19 @@ namespace Završni___Vozni_red_vlakova
             ticketSelling.Dock = DockStyle.Fill;
             ticketSelling.Show();
             ticketSelling.BringToFront();
+        }
 
+        private void ToolStripMenuItem_PersonelTransportChange_Click(object sender, EventArgs e)
+        {
+            TicketSellingEditor ticketSellingEditor = new TicketSellingEditor();
+            ticketSellingEditor.TopLevel = false;
+            this.FormPanel.Controls.Add(ticketSellingEditor);
+            this.FormPanel.Location = new Point(269, 80);
+            this.FormPanel.Size = new Size(1229, 870);
+            ticketSellingEditor.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            ticketSellingEditor.Dock = DockStyle.Fill;
+            ticketSellingEditor.Show();
+            ticketSellingEditor.BringToFront();
         }
     }
 }

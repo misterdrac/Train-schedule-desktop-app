@@ -198,6 +198,7 @@
             this.ToolStripMenuItem_PersonelTransportChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ToolStripMenuItem_PersonelTransportChange.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.ToolStripMenuItem_PersonelTransportChange.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.ToolStripMenuItem_PersonelTransportChange.Click += new System.EventHandler(this.ToolStripMenuItem_PersonelTransportChange_Click);
             // 
             // ToolStripMenuItem_Logistics
             // 

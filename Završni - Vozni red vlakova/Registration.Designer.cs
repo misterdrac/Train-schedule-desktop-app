@@ -194,9 +194,9 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(176, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 16);
+            this.label6.Size = new System.Drawing.Size(129, 16);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Vrijeme prijave :";
+            this.label6.Text = "Vrijeme registracije :";
             // 
             // registrationButton
             // 

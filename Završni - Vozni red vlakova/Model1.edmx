@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="ZR_VozniRedVlakovaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Train_Lines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Broj_PutnickeLinije" Type="int" />
+          <Property Name="Broj_Lokomotive" Type="int" />
+          <Property Name="Smjer_Kretanja" Type="varchar" MaxLength="70" />
+          <Property Name="Vrijeme_Dolaska" Type="time" Precision="7" />
+          <Property Name="Vrijeme_Odlaska" Type="time" Precision="7" />
+          <Property Name="Brzi_Vlak" Type="varchar" MaxLength="2" />
+          <Property Name="Peron" Type="int" />
+          <Property Name="Kolosijek" Type="int" />
+          <Property Name="Vrijeme_Kašnjenja" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="User_Table">
           <Key>
             <PropertyRef Name="ID" />
@@ -16,6 +31,7 @@
           <Property Name="User_LoginDT" Type="datetime" />
         </EntityType>
         <EntityContainer Name="ZR_VozniRedVlakovaModelStoreContainer">
+          <EntitySet Name="Train_Lines" EntityType="Self.Train_Lines" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Table" EntityType="Self.User_Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -23,6 +39,21 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ZR_VozniRedVlakovaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Train_Lines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Broj_PutnickeLinije" Type="Int32" />
+          <Property Name="Broj_Lokomotive" Type="Int32" />
+          <Property Name="Smjer_Kretanja" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Vrijeme_Dolaska" Type="Time" Precision="7" />
+          <Property Name="Vrijeme_Odlaska" Type="Time" Precision="7" />
+          <Property Name="Brzi_Vlak" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Peron" Type="Int32" />
+          <Property Name="Kolosijek" Type="Int32" />
+          <Property Name="Vrijeme_Kašnjenja" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="User_Table">
           <Key>
             <PropertyRef Name="ID" />
@@ -34,6 +65,7 @@
           <Property Name="User_LoginDT" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="ZR_VozniRedVlakovaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Train_Lines" EntityType="Self.Train_Lines" />
           <EntitySet Name="User_Table" EntityType="Self.User_Table" />
         </EntityContainer>
       </Schema>
@@ -42,6 +74,22 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ZR_VozniRedVlakovaModelStoreContainer" CdmEntityContainer="ZR_VozniRedVlakovaEntities">
+          <EntitySetMapping Name="Train_Lines">
+            <EntityTypeMapping TypeName="ZR_VozniRedVlakovaModel.Train_Lines">
+              <MappingFragment StoreEntitySet="Train_Lines">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Broj_PutnickeLinije" ColumnName="Broj_PutnickeLinije" />
+                <ScalarProperty Name="Broj_Lokomotive" ColumnName="Broj_Lokomotive" />
+                <ScalarProperty Name="Smjer_Kretanja" ColumnName="Smjer_Kretanja" />
+                <ScalarProperty Name="Vrijeme_Dolaska" ColumnName="Vrijeme_Dolaska" />
+                <ScalarProperty Name="Vrijeme_Odlaska" ColumnName="Vrijeme_Odlaska" />
+                <ScalarProperty Name="Brzi_Vlak" ColumnName="Brzi_Vlak" />
+                <ScalarProperty Name="Peron" ColumnName="Peron" />
+                <ScalarProperty Name="Kolosijek" ColumnName="Kolosijek" />
+                <ScalarProperty Name="Vrijeme_Kašnjenja" ColumnName="Vrijeme_Kašnjenja" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="User_Table">
             <EntityTypeMapping TypeName="ZR_VozniRedVlakovaModel.User_Table">
               <MappingFragment StoreEntitySet="User_Table">

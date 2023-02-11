@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0aaf9bb15e854605bcd01a4c427fe01a" Name="Diagram1">
-        <EntityTypeShape EntityType="ZR_VozniRedVlakovaModel.User_Table" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="26809e66704d42a88cb70a3e8b3a2de6" Name="Diagram1">
+        <EntityTypeShape EntityType="ZR_VozniRedVlakovaModel.Train_Lines" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZR_VozniRedVlakovaModel.User_Table" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
