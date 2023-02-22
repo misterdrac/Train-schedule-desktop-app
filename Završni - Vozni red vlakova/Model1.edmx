@@ -5,6 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="ZR_VozniRedVlakovaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CargoTrain_Lines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Broj_lokomotive" Type="int" />
+          <Property Name="Mjesto_polaska" Type="varchar" MaxLength="50" />
+          <Property Name="Mjesto_dolaska" Type="varchar" MaxLength="50" />
+          <Property Name="Vrijeme_polaska" Type="time" Precision="7" />
+          <Property Name="Vrijeme_dolaska" Type="time" Precision="7" />
+          <Property Name="Vrsta_tereta" Type="varchar" MaxLength="50" />
+          <Property Name="Kolicina_tereta" Type="varchar" MaxLength="50" />
+          <Property Name="Tezina_tereta(tona)" Type="float" />
+        </EntityType>
         <EntityType Name="Train_Lines">
           <Key>
             <PropertyRef Name="ID" />
@@ -31,6 +45,7 @@
           <Property Name="User_LoginDT" Type="datetime" />
         </EntityType>
         <EntityContainer Name="ZR_VozniRedVlakovaModelStoreContainer">
+          <EntitySet Name="CargoTrain_Lines" EntityType="Self.CargoTrain_Lines" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Train_Lines" EntityType="Self.Train_Lines" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Table" EntityType="Self.User_Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -39,6 +54,20 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ZR_VozniRedVlakovaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CargoTrain_Lines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Broj_lokomotive" Type="Int32" />
+          <Property Name="Mjesto_polaska" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mjesto_dolaska" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vrijeme_polaska" Type="Time" Precision="7" />
+          <Property Name="Vrijeme_dolaska" Type="Time" Precision="7" />
+          <Property Name="Vrsta_tereta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Kolicina_tereta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tezina_tereta_tona_" Type="Double" />
+        </EntityType>
         <EntityType Name="Train_Lines">
           <Key>
             <PropertyRef Name="ID" />
@@ -65,6 +94,7 @@
           <Property Name="User_LoginDT" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="ZR_VozniRedVlakovaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CargoTrain_Lines" EntityType="Self.CargoTrain_Lines" />
           <EntitySet Name="Train_Lines" EntityType="Self.Train_Lines" />
           <EntitySet Name="User_Table" EntityType="Self.User_Table" />
         </EntityContainer>
@@ -74,6 +104,21 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ZR_VozniRedVlakovaModelStoreContainer" CdmEntityContainer="ZR_VozniRedVlakovaEntities">
+          <EntitySetMapping Name="CargoTrain_Lines">
+            <EntityTypeMapping TypeName="ZR_VozniRedVlakovaModel.CargoTrain_Lines">
+              <MappingFragment StoreEntitySet="CargoTrain_Lines">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Broj_lokomotive" ColumnName="Broj_lokomotive" />
+                <ScalarProperty Name="Mjesto_polaska" ColumnName="Mjesto_polaska" />
+                <ScalarProperty Name="Mjesto_dolaska" ColumnName="Mjesto_dolaska" />
+                <ScalarProperty Name="Vrijeme_polaska" ColumnName="Vrijeme_polaska" />
+                <ScalarProperty Name="Vrijeme_dolaska" ColumnName="Vrijeme_dolaska" />
+                <ScalarProperty Name="Vrsta_tereta" ColumnName="Vrsta_tereta" />
+                <ScalarProperty Name="Kolicina_tereta" ColumnName="Kolicina_tereta" />
+                <ScalarProperty Name="Tezina_tereta_tona_" ColumnName="Tezina_tereta(tona)" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Train_Lines">
             <EntityTypeMapping TypeName="ZR_VozniRedVlakovaModel.Train_Lines">
               <MappingFragment StoreEntitySet="Train_Lines">

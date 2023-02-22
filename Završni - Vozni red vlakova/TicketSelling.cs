@@ -15,7 +15,7 @@ namespace Završni___Vozni_red_vlakova
     public partial class TicketSelling : Form
     {
         ZR_VozniRedVlakovaEntities trainLines = new ZR_VozniRedVlakovaEntities();
-        bool startLocationBool, destinationLocationBool, startDateBool, passengerNumBool, discountBoxBool, ticketFormatBool, confirmationCheckBoxBool, oneWayButtonBool, bothWaysButtonBool;
+        bool startLocationBool, destinationLocationBool, startDateBool,returningDateBool, passengerNumBool, discountBoxBool, ticketFormatBool, confirmationCheckBoxBool, oneWayButtonBool, bothWaysButtonBool;
         public TicketSelling()
         {
             InitializeComponent();
@@ -36,6 +36,29 @@ namespace Završni___Vozni_red_vlakova
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            startLocation.Text = "Sisak";
+            destinationLocation.Text = "Zagreb";
+            viaLocation.Text = "Lekenik";
+            returningLocation.Text = "Sunja";
+            this.placanjePanel.Visible = false;
+            // kreiranje lista u koje se spremaju podatci koje koristi ComboBoxovi
+            List<int> number = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+            passengerNum.DataSource = number;
+            passengerNum.SelectedIndex = 3;
+            List<string> discount = new List<string>() { "Redovna cijena", "Dijete (6 - 12 god)", "Student", "Umirovljenik ili starija osoba" };
+            discountBox.DataSource = discount;
+            discountBox.SelectedIndex = 0;
+            List<string> format = new List<string>() { "MS Word dokument", "PDF dokument", "Slika" };
+            ticketFormat.DataSource = format;
+            ticketFormat.SelectedIndex = 1;
+            List<string> payment = new List<string>() { "Kartica", "Gotovina" };
+            paymentMethodBox.DataSource = payment;
+            paymentMethodBox.SelectedIndex = 0;
+            List<string> creditCards = new List<string>() { "MasterCard", "Visa", "Diners", "Maestro" };
+            creditCardsBox.DataSource = creditCards;
+            creditCardsBox.SelectedIndex = 3;
+            List<string> kiosk = new List<string>() { "Zagreb", "Sisak", "Varaždin", "Vinkovci", "Osijek", "Rijeka" };
+            kioskBox.DataSource = kiosk;
         }
         private void oneWayButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -44,6 +67,7 @@ namespace Završni___Vozni_red_vlakova
                 if (oneWayButton.Checked) 
                 {
                     oneWayButtonBool = true;
+                    returningDateBool = true;
                 }
                 else 
                 {
@@ -81,7 +105,7 @@ namespace Završni___Vozni_red_vlakova
             {
                 if (string.IsNullOrEmpty(startLocation.Text))
                 {
-                    MessageBox.Show("Morate upisati polazišni kolodvor");
+                    MessageBox.Show("Morate upisati polazišni kolodvor", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     startLocationBool = false;
                 }
                 else
@@ -101,7 +125,7 @@ namespace Završni___Vozni_red_vlakova
             {
                 if (string.IsNullOrEmpty(destinationLocation.Text))
                 {
-                    MessageBox.Show("Potreban je unos");
+                    MessageBox.Show("Morate upisati odredišni kolodvor", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     destinationLocationBool = false;
                 }
                 else
@@ -134,15 +158,35 @@ namespace Završni___Vozni_red_vlakova
                 }
             }
         }
+        private void returningDate_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            { 
+                DateTime selectedDate = returningDate.Value;
+                if (selectedDate.Date < DateTime.Now.Date)
+                {
+                    MessageBox.Show("Odabrani datum mora biti današnji ili neki u budućem vremenu !", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    returningDateBool = false;
+                }
+                else 
+                {
+                    returningDateBool = true;
+                }
+            }
+            catch
+            { 
+                returningDateBool = false;
+            }
+            Continuation();
+        }
         private void startDate_ValueChanged(object sender, EventArgs e)
         {
             try
             {
                 DateTime selectedDate = startDate.Value;
-
                 if (selectedDate.Date < DateTime.Now.Date)
                 {
-                    MessageBox.Show("The selected date cannot be in the past.");
+                    MessageBox.Show("Odabrani datum mora biti današnji ili neki u budućem vremenu !", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     startDateBool = false;
                 }
                 else
@@ -162,7 +206,7 @@ namespace Završni___Vozni_red_vlakova
             {
                 if (passengerNum.SelectedIndex == -1)
                 {
-                    MessageBox.Show("No option has been selected.");
+                    MessageBox.Show("Morate odabrati broj putnika !", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     passengerNumBool = false;
                 }
                 else
@@ -182,7 +226,7 @@ namespace Završni___Vozni_red_vlakova
             {
                 if (discountBox.SelectedIndex == -1)
                 {
-                    MessageBox.Show("No option has been selected.");
+                    MessageBox.Show("Morate odabrati plaćate li redovnu cijenu ili možete ostvariti popust !", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     discountBoxBool = false;
                 }
                 else
@@ -202,7 +246,7 @@ namespace Završni___Vozni_red_vlakova
             {
                 if (ticketFormat.SelectedIndex == -1)
                 {
-                    MessageBox.Show("No option has been selected.");
+                    MessageBox.Show("Potrebno je odabrati format u kojem ćete dobiti kartu", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     ticketFormatBool = false;
 
                 }
@@ -241,7 +285,7 @@ namespace Završni___Vozni_red_vlakova
         }
         private void Continuation()
         {
-            if (startLocationBool && destinationLocationBool && startDateBool && passengerNumBool && discountBoxBool && ticketFormatBool && confirmationCheckBoxBool && (oneWayButtonBool || bothWaysButtonBool))
+            if (startLocationBool && destinationLocationBool && startDateBool && returningDateBool && passengerNumBool && discountBoxBool && ticketFormatBool && confirmationCheckBoxBool && (oneWayButtonBool || bothWaysButtonBool))
             {
                 this.continueButton.Enabled = true;
             }
@@ -272,12 +316,12 @@ namespace Završni___Vozni_red_vlakova
             {
                 this.returningLocation.Enabled = false;
                 this.returningDate.Enabled = false;
-
             }
         }
         private void continueButton_Click(object sender, EventArgs e)
         {
             this.placanjePanel.Enabled = true;
+            this.placanjePanel.Visible = true;
         }
     }
 }

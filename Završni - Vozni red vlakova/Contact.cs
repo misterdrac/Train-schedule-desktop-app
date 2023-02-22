@@ -19,7 +19,7 @@ namespace Završni___Vozni_red_vlakova
 
         private void ToolStripMenuItem_Home_Click(object sender, EventArgs e)
         {
-            MainForm mainForm= new MainForm();
+            MainForm mainForm = new MainForm();
             this.Close();
             mainForm.Show();
         }

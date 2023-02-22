@@ -152,5 +152,19 @@ namespace Završni___Vozni_red_vlakova
             ticketSellingEditor.Show();
             ticketSellingEditor.BringToFront();
         }
+
+        private void ToolStripMenuItem_Logistics_Click(object sender, EventArgs e)
+        {
+            Logistics logistics = new Logistics();
+            logistics.TopLevel = false;
+            this.FormPanel.Controls.Add(logistics);
+            this.FormPanel.Location = new Point(269, 80);
+            this.FormPanel.Size = new Size(1229, 870);
+            logistics.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            logistics.Dock = DockStyle.Fill;
+            logistics.Show();
+            logistics.BringToFront();
+
+        }
     }
 }

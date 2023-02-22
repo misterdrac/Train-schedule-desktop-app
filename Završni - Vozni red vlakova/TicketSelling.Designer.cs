@@ -57,14 +57,14 @@
             this.continueButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.placanjePanel = new System.Windows.Forms.Panel();
+            this.endButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.kioskBox = new System.Windows.Forms.ComboBox();
             this.creditCardsBox = new System.Windows.Forms.ComboBox();
             this.paymentLabel = new System.Windows.Forms.Label();
             this.paymentMethodBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.endButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.placanjePanel.SuspendLayout();
             this.SuspendLayout();
@@ -169,9 +169,11 @@
             this.returningDate.Name = "returningDate";
             this.returningDate.Size = new System.Drawing.Size(97, 20);
             this.returningDate.TabIndex = 10;
+            this.returningDate.ValueChanged += new System.EventHandler(this.returningDate_ValueChanged);
             // 
             // passengerNum
             // 
+            this.passengerNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.passengerNum.FormattingEnabled = true;
             this.passengerNum.Items.AddRange(new object[] {
             "1",
@@ -189,6 +191,7 @@
             // 
             // discountBox
             // 
+            this.discountBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.discountBox.FormattingEnabled = true;
             this.discountBox.Items.AddRange(new object[] {
             "Redovna cijena",
@@ -309,6 +312,7 @@
             // 
             // ticketFormat
             // 
+            this.ticketFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ticketFormat.FormattingEnabled = true;
             this.ticketFormat.Items.AddRange(new object[] {
             "MS Word dokument",
@@ -356,6 +360,26 @@
             this.placanjePanel.Size = new System.Drawing.Size(472, 242);
             this.placanjePanel.TabIndex = 27;
             // 
+            // endButton
+            // 
+            this.endButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endButton.Location = new System.Drawing.Point(93, 150);
+            this.endButton.Name = "endButton";
+            this.endButton.Size = new System.Drawing.Size(121, 50);
+            this.endButton.TabIndex = 34;
+            this.endButton.Text = "Završi";
+            this.endButton.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(165, 79);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(130, 19);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Naplatne kućice :";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -368,6 +392,7 @@
             // 
             // kioskBox
             // 
+            this.kioskBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kioskBox.FormattingEnabled = true;
             this.kioskBox.Items.AddRange(new object[] {
             "Zagreb",
@@ -383,6 +408,7 @@
             // 
             // creditCardsBox
             // 
+            this.creditCardsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.creditCardsBox.FormattingEnabled = true;
             this.creditCardsBox.Items.AddRange(new object[] {
             "MasterCard",
@@ -406,6 +432,7 @@
             // 
             // paymentMethodBox
             // 
+            this.paymentMethodBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paymentMethodBox.FormattingEnabled = true;
             this.paymentMethodBox.Items.AddRange(new object[] {
             "Kartica",
@@ -425,26 +452,6 @@
             this.label12.Size = new System.Drawing.Size(122, 19);
             this.label12.TabIndex = 28;
             this.label12.Text = "Način plaćanja :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(165, 79);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 19);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Naplatne kućice :";
-            // 
-            // endButton
-            // 
-            this.endButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endButton.Location = new System.Drawing.Point(93, 150);
-            this.endButton.Name = "endButton";
-            this.endButton.Size = new System.Drawing.Size(121, 50);
-            this.endButton.TabIndex = 34;
-            this.endButton.Text = "Završi";
-            this.endButton.UseVisualStyleBackColor = true;
             // 
             // TicketSelling
             // 

@@ -213,6 +213,7 @@
             this.ToolStripMenuItem_Logistics.Size = new System.Drawing.Size(224, 36);
             this.ToolStripMenuItem_Logistics.Text = "Logistika";
             this.ToolStripMenuItem_Logistics.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.ToolStripMenuItem_Logistics.Click += new System.EventHandler(this.ToolStripMenuItem_Logistics_Click);
             // 
             // ToolStripMenuItem_TransportLinesChange
             // 
