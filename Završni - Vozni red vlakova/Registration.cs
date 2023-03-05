@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -71,6 +73,39 @@ namespace Završni___Vozni_red_vlakova
                 slika = true;
                 registrationUserPass_Textbox.PasswordChar = '*';
 
+            }
+        }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+            string username = registationUserName_Textbox.Text;
+            string password = registrationUserPass_Textbox.Text;
+            string email = registationUserEmail_Textbox.Text;
+            DateTime time = dateTimePicker_Registration.Value;
+
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ZR_VozniRedVlakovaEntities\" connectionString=\"metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-HF38KCR\\SQLEXPRESS;initial catalog=ZR_VozniRedVlakova;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;\" providerName=\"System.Data.EntityClient\""].ConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("INSERT INTO User_Table (User_Name, User_Pass, User_Email, User_LoginDT) VALUES (@username, @password, @email, @time)", connection);
+
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", password);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@time", time);
+
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("uspjeh");
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
             }
         }
     }

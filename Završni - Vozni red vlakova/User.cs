@@ -10,6 +10,9 @@ namespace Završni___Vozni_red_vlakova
     {
 		private string userName;
         private string userPass;
+		private string userStatus;
+		private DateTime userLoginDT;
+		private string userEmail;
 
         public string UserName
 		{
@@ -21,6 +24,7 @@ namespace Završni___Vozni_red_vlakova
 			get { return userPass; }
 			set { userPass = value; }
 		}
+
 		
 		public User(string userName, string userPass)
 		{ 

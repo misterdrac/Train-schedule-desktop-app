@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label3.Text" xml:space="preserve">
-    <value>Upisom podataka u sljedeća polja i pritiskom gumba "Potvrdi i promjeni" kao administrator mijenjate podatke putničkih linija, molimo da
-u smjer kretanja se upisuju mjesta sljedećim načinom "Petrinja-Sisak-Zagreb" radi lakše preglednosti.
- </value>
+    <value>Upisom podataka u sljedeća polja i pritiskom gumba "Dodaj", "Promijeni", "Izbriši" kao administrator mijenjate podatke teretnih linija, molimo da
+podatci koji se upisuju budu upisani u skladu s onim format kak su upisani u tablici. To znači u količinu tereta pišete broj jer se odnosi na broj vagona,
+isto vrijedi i za težinu. Vagon se posebno dodaje broju kao i mjerna jedinica.</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Proces dodavanja, promjene i brisanja podataka radi se na način da se upiše u ID polje, ID linije pa se upisuju podatci, prazna 

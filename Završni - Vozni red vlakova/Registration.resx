@@ -121,7 +121,7 @@
   <data name="HideShowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPkSURBVEhL7VJt
+        rQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPkSURBVEhL7VJt
         TFNXGK6DhEz/AMNqgV76hSvm1gaGJXy0QCmCiwPcgk66Mslm2imDseGCinOL4iYyUT4kgLIt2egG++W0
         boSlmU5hEVtlIQtMRrpI5YcQKKOFsfLs3NOCMOMS//nDJ3lyT859Pu55z+U9xROPNYGBganmT/YmSYX8
         n6OZ9b9KItf9tkEksLPSiOuqjVH1RJNIuIqqHwOxkkh+NysTjp2pKHQv9H+JmRtt4J6LHL/ajJ9aynHo
@@ -144,7 +144,7 @@
   <data name="registrationComebackButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFgSURBVDhPY6A2
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFgSURBVDhPY6A2
         4ITSpAMhISEPRXn52yIiIpFQIeIBSLOVhcWDpPj4PxISEmuhwsQBmOb87Oz/qioqL4F4p7qa2jYQtrGy
         mmdjYTEPxldWUlonLi7eCtQmANENBJISEoey0tL+gwxIjo//nxAbixNnp6f/T0tO/q+nq3tTXl4+CGoE
         g4CigsIJkCGqqqqvpCQlZ6spKdVjwyrKyou0NDQuAC36Y2Fm9pKfn18ZagbEkLSkpP9iYmIHoWK4AIuC

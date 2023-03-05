@@ -142,7 +142,7 @@
             // HideShowButton
             // 
             this.HideShowButton.Image = ((System.Drawing.Image)(resources.GetObject("HideShowButton.Image")));
-            this.HideShowButton.Location = new System.Drawing.Point(350, 131);
+            this.HideShowButton.Location = new System.Drawing.Point(350, 94);
             this.HideShowButton.Name = "HideShowButton";
             this.HideShowButton.Size = new System.Drawing.Size(40, 35);
             this.HideShowButton.TabIndex = 16;
@@ -151,7 +151,7 @@
             // 
             // registationUserEmail_Textbox
             // 
-            this.registationUserEmail_Textbox.Location = new System.Drawing.Point(179, 102);
+            this.registationUserEmail_Textbox.Location = new System.Drawing.Point(179, 139);
             this.registationUserEmail_Textbox.Name = "registationUserEmail_Textbox";
             this.registationUserEmail_Textbox.Size = new System.Drawing.Size(165, 20);
             this.registationUserEmail_Textbox.TabIndex = 15;
@@ -160,7 +160,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(176, 83);
+            this.label7.Location = new System.Drawing.Point(176, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 16);
             this.label7.TabIndex = 14;
@@ -208,6 +208,7 @@
             this.registrationButton.TabIndex = 9;
             this.registrationButton.Text = "Registriraj se !";
             this.registrationButton.UseVisualStyleBackColor = true;
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // pictureBox1
             // 
@@ -221,7 +222,7 @@
             // 
             // registrationUserPass_Textbox
             // 
-            this.registrationUserPass_Textbox.Location = new System.Drawing.Point(179, 139);
+            this.registrationUserPass_Textbox.Location = new System.Drawing.Point(179, 102);
             this.registrationUserPass_Textbox.Name = "registrationUserPass_Textbox";
             this.registrationUserPass_Textbox.PasswordChar = '*';
             this.registrationUserPass_Textbox.Size = new System.Drawing.Size(165, 20);
@@ -238,7 +239,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 122);
+            this.label4.Location = new System.Drawing.Point(176, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 16);
             this.label4.TabIndex = 2;

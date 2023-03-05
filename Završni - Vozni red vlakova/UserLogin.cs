@@ -139,7 +139,12 @@ namespace Završni___Vozni_red_vlakova
 
         private void UserLoginExitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult x;
+            x = MessageBox.Show("Jeste li sigurni da želite izaći iz aplikacije?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (x == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

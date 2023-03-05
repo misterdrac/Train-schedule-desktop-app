@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace Završni___Vozni_red_vlakova
 {
-    public partial class Logistics : Form
+    public partial class LogisticsEditor : Form
     {
         ZR_VozniRedVlakovaEntities cargoTrainLines = new ZR_VozniRedVlakovaEntities();
-        public Logistics()
+        public LogisticsEditor()
         {
             InitializeComponent();
         }
 
-        private void Logistics_Load(object sender, EventArgs e)
+        private void LogisticsEditor_Load(object sender, EventArgs e)
         {
             cargoTrainLines.CargoTrain_Lines.Load();
             dataGridView1.DataSource = cargoTrainLines.CargoTrain_Lines.Local.ToBindingList();
@@ -28,11 +28,16 @@ namespace Završni___Vozni_red_vlakova
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-        }
-
-        private void helpButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Pri rezervaciji svoje pošiljke, koristete se tablicom iznad kako bi lakše se snašli u samo rezervaciji. Tablicu možete pretraživati samo preko broja teretne linije ili preko broja lokomotive, po ostalim podatcima ne. Težina tereta nije potrebna da bude poznata u početku jer se to važe posebno !", "Prozor za pomoć", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            arrivalTimePicker.Format = DateTimePickerFormat.Time;
+            arrivalTimePicker.ShowUpDown = true;
+            arrivalTimePicker.CustomFormat = "HH:mm";
+            arrivalTimePicker.MaxDate = DateTime.Today.AddDays(1).AddSeconds(-1);
+            arrivalTimePicker.ShowCheckBox = true;
+            departureTimePicker.Format = DateTimePickerFormat.Time;
+            departureTimePicker.ShowUpDown = true;
+            departureTimePicker.CustomFormat = "HH:mm";
+            departureTimePicker.MaxDate = DateTime.Today.AddDays(1).AddSeconds(-1);
+            departureTimePicker.ShowCheckBox = true;
         }
     }
 }

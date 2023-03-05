@@ -44,6 +44,7 @@
             this.ToolStripMenuItem_PersonelTransportChange = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Logistics = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_TransportLinesChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_UserManagment = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Contact = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Information = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,13 +142,14 @@
             this.ToolStripMenuItem_PersonelTransportChange,
             this.ToolStripMenuItem_Logistics,
             this.ToolStripMenuItem_TransportLinesChange,
+            this.toolStripMenuItem_UserManagment,
             this.ToolStripMenuItem_Contact,
             this.ToolStripMenuItem_Information,
             this.ToolStripMenuItem_Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 5);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(269, 916);
+            this.menuStrip1.Size = new System.Drawing.Size(269, 981);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "Izbornik";
             // 
@@ -231,6 +233,23 @@
             this.ToolStripMenuItem_TransportLinesChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ToolStripMenuItem_TransportLinesChange.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.ToolStripMenuItem_TransportLinesChange.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.ToolStripMenuItem_TransportLinesChange.Click += new System.EventHandler(this.ToolStripMenuItem_TransportLinesChange_Click);
+            // 
+            // toolStripMenuItem_UserManagment
+            // 
+            this.toolStripMenuItem_UserManagment.AutoSize = false;
+            this.toolStripMenuItem_UserManagment.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripMenuItem_UserManagment.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem_UserManagment.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem_UserManagment.Image")));
+            this.toolStripMenuItem_UserManagment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem_UserManagment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem_UserManagment.Margin = new System.Windows.Forms.Padding(0, 0, 0, 60);
+            this.toolStripMenuItem_UserManagment.Name = "toolStripMenuItem_UserManagment";
+            this.toolStripMenuItem_UserManagment.Size = new System.Drawing.Size(224, 36);
+            this.toolStripMenuItem_UserManagment.Text = "Upr. statusom korisnika";
+            this.toolStripMenuItem_UserManagment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripMenuItem_UserManagment.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.toolStripMenuItem_UserManagment.Click += new System.EventHandler(this.toolStripMenuItem_UserManagment_Click);
             // 
             // ToolStripMenuItem_Contact
             // 
@@ -301,7 +320,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1484, 916);
+            this.ClientSize = new System.Drawing.Size(1488, 981);
             this.Controls.Add(this.FormPanel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -348,5 +367,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Exit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel FormPanel;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_UserManagment;
     }
 }

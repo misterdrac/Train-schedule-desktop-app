@@ -36,6 +36,7 @@ namespace Završni___Vozni_red_vlakova
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridView1.ReadOnly = true;
             startLocation.Text = "Sisak";
             destinationLocation.Text = "Zagreb";
             viaLocation.Text = "Lekenik";
@@ -157,6 +158,18 @@ namespace Završni___Vozni_red_vlakova
                     kioskBox.Enabled = true;
                 }
             }
+        }
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Putničke linije možete pretraživati upiso u polje broj linije ili mjestu koje se nalazi po stupce Smjer kretanja, po ostalim parametrima ne možete. Možete sortirati podatke po nekom abecednom redoslijedu ili brojevnom. Tijekom upisa podataka upisujte prave podatke ili se karte ne budu smatrale važećima. Ugodno putovanje Vam želimo ! ", "Prozor za pomoć", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+           
+            dataGridView1.DataSource = trainLines.Train_Lines.Where(i => i.Smjer_Kretanja.Contains(this.searchBar.Text)).ToList();
+
+             
         }
         private void returningDate_ValueChanged(object sender, EventArgs e)
         {

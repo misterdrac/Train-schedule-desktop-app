@@ -65,6 +65,7 @@ namespace Završni___Vozni_red_vlakova
                 this.ToolStripMenuItem_Contact.Visible = true;
                 this.ToolStripMenuItem_Information.Visible = true;
                 this.ToolStripMenuItem_Exit.Visible = true;
+                this.toolStripMenuItem_UserManagment.Visible = true;
             }
             else
             {
@@ -76,6 +77,8 @@ namespace Završni___Vozni_red_vlakova
                 this.ToolStripMenuItem_Contact.Visible = true;
                 this.ToolStripMenuItem_Information.Visible = true;
                 this.ToolStripMenuItem_Exit.Visible = true;
+                this.toolStripMenuItem_UserManagment.Visible = false;
+
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -89,16 +92,27 @@ namespace Završni___Vozni_red_vlakova
             MainForm mainForm1 = new MainForm();
             mainForm1.Show();
             mainForm1.BringToFront();
+          
         }
 
         private void ToolStripMenuItem_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult x;
+            x = MessageBox.Show("Jeste li sigurni da želite izaći iz aplikacije?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (x == DialogResult.Yes)
+            {
+                Application.Exit();
+            }  
         }
 
         private void ToolStripMenuItem_Exit_DoubleClick(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult x;
+            x = MessageBox.Show("Jeste li sigurni da želite izaći iz aplikacije?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (x == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void ToolStripMenuItem_Contact_Click(object sender, EventArgs e)
@@ -107,7 +121,7 @@ namespace Završni___Vozni_red_vlakova
             contact.TopLevel = false;
             this.FormPanel.Controls.Add(contact);
             this.FormPanel.Location = new Point(269, 80);
-            this.FormPanel.Size = new Size(1229, 870);
+            this.FormPanel.Size = new Size(1229, 940);
             contact.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             contact.Dock = DockStyle.Fill;
             contact.Show();
@@ -120,7 +134,7 @@ namespace Završni___Vozni_red_vlakova
             information.TopLevel = false;
             this.FormPanel.Controls.Add(information);
             this.FormPanel.Location = new Point(269, 80);
-            this.FormPanel.Size = new Size(1229, 870);
+            this.FormPanel.Size = new Size(1229, 940);
             information.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             information.Dock = DockStyle.Fill;
             information.Show();
@@ -133,7 +147,7 @@ namespace Završni___Vozni_red_vlakova
             ticketSelling.TopLevel = false;
             this.FormPanel.Controls.Add(ticketSelling);
             this.FormPanel.Location = new Point(269, 80);
-            this.FormPanel.Size = new Size(1229, 870);
+            this.FormPanel.Size = new Size(1229, 940);
             ticketSelling.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ticketSelling.Dock = DockStyle.Fill;
             ticketSelling.Show();
@@ -146,7 +160,7 @@ namespace Završni___Vozni_red_vlakova
             ticketSellingEditor.TopLevel = false;
             this.FormPanel.Controls.Add(ticketSellingEditor);
             this.FormPanel.Location = new Point(269, 80);
-            this.FormPanel.Size = new Size(1229, 870);
+            this.FormPanel.Size = new Size(1229, 940);
             ticketSellingEditor.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ticketSellingEditor.Dock = DockStyle.Fill;
             ticketSellingEditor.Show();
@@ -159,12 +173,38 @@ namespace Završni___Vozni_red_vlakova
             logistics.TopLevel = false;
             this.FormPanel.Controls.Add(logistics);
             this.FormPanel.Location = new Point(269, 80);
-            this.FormPanel.Size = new Size(1229, 870);
+            this.FormPanel.Size = new Size(1229, 940);
             logistics.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             logistics.Dock = DockStyle.Fill;
             logistics.Show();
             logistics.BringToFront();
 
+        }
+
+        private void ToolStripMenuItem_TransportLinesChange_Click(object sender, EventArgs e)
+        {
+            LogisticsEditor logisticsEditor = new LogisticsEditor();
+            logisticsEditor.TopLevel = false;
+            this.FormPanel.Controls.Add(logisticsEditor);
+            this.FormPanel.Location = new Point(269, 80);
+            this.FormPanel.Size = new Size(1229, 940);
+            logisticsEditor.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            logisticsEditor.Dock = DockStyle.Fill;
+            logisticsEditor.Show();
+            logisticsEditor.BringToFront();
+        }
+
+        private void toolStripMenuItem_UserManagment_Click(object sender, EventArgs e)
+        {
+            UserStatusEditor userStatusEditor = new UserStatusEditor();
+            userStatusEditor.TopLevel = false;
+            this.FormPanel.Controls.Add(userStatusEditor);
+            this.FormPanel.Location = new Point(269, 80);
+            this.FormPanel.Size = new Size(1229, 940);
+            userStatusEditor.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            userStatusEditor.Dock = DockStyle.Fill;
+            userStatusEditor.Show();
+            userStatusEditor.BringToFront();
         }
     }
 }

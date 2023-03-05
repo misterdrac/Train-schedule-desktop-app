@@ -495,7 +495,7 @@
   <data name="ToolStripMenuItem_TicketSelling.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        ugAAALoBTx5ghQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAVnSURBVFhHxZZZ
+        uAAAALgBMOCjDAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAVnSURBVFhHxZZZ
         UFNXGMdjp9OXttM+9LkPTqfOlCmNofShrW1mKmaHQAhLSBMwjWQx7AYMVdbYVJAmgkhM2CFkCIuAC63I
         ooKIU7EOS4Gg1FpbdWgVbOs2/ZpzuTdmuTBxmfE/85tzz3fOPd+fc77DDcVXISHr34jjhxTh3ScWi8fb
         Ik7XjovUaWObWayNeDgw0UPefStB+OF4ecXmmzF86k4U++Jjaig2GIDYbHZYst54ee/IPCCScoucTCYz
@@ -525,7 +525,7 @@
   <data name="ToolStripMenuItem_PersonelTransportChange.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        ugAAALoBTx5ghQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAVnSURBVFhHxZZZ
+        uAAAALgBMOCjDAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAVnSURBVFhHxZZZ
         UFNXGMdjp9OXttM+9LkPTqfOlCmNofShrW1mKmaHQAhLSBMwjWQx7AYMVdbYVJAmgkhM2CFkCIuAC63I
         ooKIU7EOS4Gg1FpbdWgVbOs2/ZpzuTdmuTBxmfE/85tzz3fOPd+fc77DDcVXISHr34jjhxTh3ScWi8fb
         Ik7XjovUaWObWayNeDgw0UPefStB+OF4ecXmmzF86k4U++Jjaig2GIDYbHZYst54ee/IPCCScoucTCYz
@@ -604,6 +604,36 @@
         ILug3MWw/DSWQ5Bb8OpOPfl0jXNXbesvW8PNDpYXPqAmLzAsy3colZoxnheGcR3hLlPECKJqRFRKVxmG
         eQnXq0+/Al/8bluVkuYaJwgjuN7uLlNE4gGHRaX6moJlj+N64/6ubWITjwaZ7HfNfxJMa0FmEQAAAABJ
         RU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripMenuItem_UserManagment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAWFSURBVEhLjZV5
+        bBR1FMff7nQ7s9fszOzM3tvddrtXjwVa2RYKUrlaYqlAS5GCIRDCXa0hoCIICagQiXIJhATqwR9iVRIC
+        UoOJ/UswwQRjOKIQNIFCgXZ36V2O5/x2x6YtLfpJXn7z+7037/ub934zA8MRBVjuzYDr4QDc8rrhEquF
+        IsX1X6RrmfSdOia9Rc+k/6FlNH9pac1+xZeCJK+tglhvC+DJrQy2XAaM5kOX7PKnIp7LFI+dSywoj2BN
+        WQSrZuShUU/fU3wpyM5JcnwAONFCJ8cLDbJIHjQpIc+j1CYaukrHZ6HHziecVraPodMSii8FKQtJSqzM
+        zeDJLQy2NwGOC8OfSsgz1HLcnnKD4Wf5kjWzxjtTX4h07VjzWtf86ZOeijx7NhWlINf8N1KWpMhdwCcX
+        ARt3AEZCcEQJGcJSjnszwjDtFAAu4/m18lI0mhe8d6XxMNrNwi15LiYD/4U0lNSclIXs/Jv3AcM+uE9c
+        qYih5ND0wxqW/Ux5gqBgc9x0Z2WTsmBWKL+VkyyXkoHD8I+Xa07Koux8xOSEfJqOKZeE0rkr18eiFQuQ
+        svuwbvdRzAjm3lF8z5Bt1MMGeTSkpiMzTCAiWB23zDZnq5YTOqzurFssL15XfENwCjxce6ceHul10CDP
+        danloWzzepkxDNOmTAfjlG2ebEPv8/CwyS/CaYsZbh8/DE8SNwE3r4c+yQRXyXomR1WuEQT3EpNpI7Ey
+        vf5CpYEdfnxpjtLeLmfzezhK36yspXDJia5tBCwJQaIoD9qJFeZAbNWL8LBhtg7zJerYSpNpmtzQ86Sp
+        tSz38TYA9XKeX7ya46Yoaby0Kq3HreETOjV9V56rU8syRODeNsBDVYBfLARs3aLGT8t12FChxzMzXUmB
+        OkkaV82yXw42ImhJS3ssP91EkTKe+dBS9XifrRYXmYo7WbV2nZI+JXBuBWBF+TQMeGx4b2tK4FiphKen
+        eZICayRp7GgCdYJQLFHGm5ON/piJ1vVN0Qc7rRr2hJIeLFYj3Lj4BmBBwIKFPg77dgIWBcxY4nPjV1Pc
+        6OeoxvlGrrLSyH5PbCHLfTKsRCq9im4qDgTjv584iAaa6dWo1fUgGAzVIY/zLm9gegaXqHd7Gk72u5Gx
+        uJDX0hgN+x64ROF2mdG4izSZ7Hy2wfBDan9JJk4qmBArihR02g3mnqXzFvVZBLENnBbxfry5EQsDGfGp
+        IWPi5bKpyRI9WOHA5tkO9EscfvfRZhRt9q4fD32ADsn8K8k2wjEtrZ45p2N8XkF3sTmnZ1XNssceh7sN
+        crM8d/ovnMJVVbP6j7z7Onps3JPCTDPeqPHhvpdMODnTis1HdiHlze3lvYGEyypeVRIOf9EsNslywGmx
+        H7aLtkNklHjz+wMCxA6+vbZ/ZjC9/+hkO8Zrw0lbPcaJe+uXYc0rFR2qwpndasnVChrNGJJxmAAh26XT
+        /OIxaK44dGmn5DkNHrul7ez+7XjgrTWPXDzdW1E2Hf1ux4BA28Iw1oRsOKFwXIzRavtVuSWdwFkfyDe7
+        lI/d5+S9INmteu3O+T6xu2mGF5f4uHZ5aRKo0rUd6mDxw3SttuenxQYc53VigduCV6q9OC2TwuqwJnlM
+        qeyCLqioQ1BT3SDYvpVvppZxXD3pA/lcV5lMG6wC9/ee9StxddWseCjDEXeIwjkAk+UOvPoe6kXp4d5i
+        K+6J2p+xdWEBqZySDhIHWnagB4RBPxyHUzK3XP76ULLcx3ds6JYPxMUBgeQIsGIU2w2hifGRBAbh5szU
+        7QljA/G500vu+zOtCV5SnR8uMBql/0OgdM4KbSwQpeNihH20ZJOuPyNIyTnTNDHgrS3ySJoyGlGgdak4
+        JtXQEYgaeVW7jlV1ggqeCjZ1O6NTtf8D0PIlnWEHMj8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="ToolStripMenuItem_Contact.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
